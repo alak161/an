@@ -4,7 +4,7 @@ define(function (require) {
   var _ = require('lodash');
   var $ = require('jquery');
   var arrayToLinkedList = require('ui/agg_response/hierarchical/_array_to_linked_list');
-  var formatNumber = d3.format(',.0f');
+  var formatNumber = d3.format(',.00f');
 
   module.controller('KbnGaugeController', function ($scope, $element, $rootScope, Private) {
 
