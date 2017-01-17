@@ -5,7 +5,6 @@ define(function (require) {
   var $ = require('jquery');
   var arrayToLinkedList = require('ui/agg_response/hierarchical/_array_to_linked_list');
   var formatNumber = d3.format(',.0f');
-  var num=formatNumber/10;
 
   module.controller('KbnGaugeController', function ($scope, $element, $rootScope, Private) {
 
@@ -124,7 +123,7 @@ define(function (require) {
       			.attr('d', pointerLine)
       			.attr('transform', 'rotate(' +(-90) +')');
 
-      		update(newValue === undefined ? 0 : newValue%);
+      		update(newValue === undefined ? 0 : newValue*1000000);
 
           // display number (round off to the 2nd decimal place)
           svg.append('svg')
