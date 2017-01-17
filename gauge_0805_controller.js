@@ -4,7 +4,7 @@ define(function (require) {
   var _ = require('lodash');
   var $ = require('jquery');
   var arrayToLinkedList = require('ui/agg_response/hierarchical/_array_to_linked_list');
-  var formatNumber = d3.format(',.00f');
+  var formatNumber = d3.format(',.0f');
 
   module.controller('KbnGaugeController', function ($scope, $element, $rootScope, Private) {
 
@@ -131,7 +131,7 @@ define(function (require) {
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
-                   .text((newValue.toFixed(2))+'%');  // .text(((newValue.toFixed(2))/100)+'%');
+                   .text(((newValue.toFixed(2))+'%')/10);  // .text(((newValue.toFixed(2))/100)+'%');
 
         }
       	that.render = render;
