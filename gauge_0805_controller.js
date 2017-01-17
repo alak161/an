@@ -131,7 +131,7 @@ define(function (require) {
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
-                   .text(newValue + '%');  // .text(((newValue.toFixed(2))/100)+'%');
+                   .text(newValue/100);  // .text(((newValue.toFixed(2))/100)+'%');
 
         }
       	that.render = render;
@@ -178,7 +178,7 @@ define(function (require) {
 
       buckets.map(function(bucket) {
         console.log(bucket);
-        var value = metricsAgg.getValue(bucket)*10/metricsAgg2.getValue(bucket);
+        var value = metricsAgg.getValue(bucket)*100/metricsAgg2.getValue(bucket);
         _render(value, bucket.key);
       });
   	});
