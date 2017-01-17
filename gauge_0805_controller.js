@@ -127,11 +127,11 @@ define(function (require) {
 
           // display number (round off to the 2nd decimal place)
           svg.append('svg')
-                   .append('text'/10)
+                   .append('text')
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
-                   .text((newValue.toFixed(2))/10+'%');  // .text(((newValue.toFixed(2))/100)+'%');
+                   .text((newValue.toFixed(2)));  // .text(((newValue.toFixed(2))/100)+'%');
 
         }
       	that.render = render;
