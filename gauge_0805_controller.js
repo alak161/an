@@ -127,7 +127,7 @@ define(function (require) {
 
           // display number (round off to the 2nd decimal place)
           svg.append('svg')
-                   .append('text')
+                   .append('text'/10)
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
