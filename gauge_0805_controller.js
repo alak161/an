@@ -115,7 +115,7 @@ define(function (require) {
       						[0, config.pointerTailLength],
       						[config.pointerWidth / 2, 0] ];
       		var pointerLine = d3.svg.line().interpolate('monotone');
-      		var pg = svg.append('g').data([lineData]/10)
+      		var pg = svg.append('g').data([lineData])
       				.attr('class', 'pointer')
       				.attr('transform', centerTx);
 
@@ -131,9 +131,7 @@ define(function (require) {
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
-                   .text(newValue/10);
-          //         .text(newValue.toFixed(2))+'%');  
-          // .text(((newValue.toFixed(2))/100)+'%');
+                   .text(newValue.toFixed(2)+'%');
 
         }
       	that.render = render;
@@ -173,8 +171,8 @@ define(function (require) {
 
   		var tagsAggId = $scope.vis.aggs.bySchemaName['segment'][0].id;    // = 2 or 3 ....
 
-  		var metricsAgg = $scope.vis.aggs.bySchemaName['metric'][0]; 
-      var metricsAgg2 = $scope.vis.aggs.bySchemaName['metric2'][0]; 
+  		var metricsAgg = $scope.vis.aggs.bySchemaName['metric'][0]; //Dividend
+      var metricsAgg2 = $scope.vis.aggs.bySchemaName['metric2'][0]; //Divisor
   		var buckets = resp.aggregations[tagsAggId].buckets;  //an object
 
 
