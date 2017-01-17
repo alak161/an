@@ -131,7 +131,7 @@ define(function (require) {
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
-                   .text(((newValue.toFixed(2))/100)+'%');
+                   .text(((newValue.toFixed(2))/100));  // .text(((newValue.toFixed(2))/100)+'%');
 
         }
       	that.render = render;
