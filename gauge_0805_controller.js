@@ -130,8 +130,8 @@ define(function (require) {
                    .append('text')
                    .style("font-size", "16px")
                    .attr('x',135)
-                   .attr('y',200)
-                   .text(newValue.toFixed(2));//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                   .attr('y',200);
+                   //.text(newValue.toFixed(2));//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
         }
       	that.render = render;
