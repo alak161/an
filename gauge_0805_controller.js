@@ -5,6 +5,7 @@ define(function (require) {
   var $ = require('jquery');
   var arrayToLinkedList = require('ui/agg_response/hierarchical/_array_to_linked_list');
   var formatNumber = d3.format(',.0f');
+  var num=formatNumber/10;
 
   module.controller('KbnGaugeController', function ($scope, $element, $rootScope, Private) {
 
