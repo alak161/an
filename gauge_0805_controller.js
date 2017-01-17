@@ -115,7 +115,7 @@ define(function (require) {
       						[0, config.pointerTailLength],
       						[config.pointerWidth / 2, 0] ];
       		var pointerLine = d3.svg.line().interpolate('monotone');
-      		var pg = svg.append('g').data([lineData])
+      		var pg = svg.append('g').data([lineData]/10)
       				.attr('class', 'pointer')
       				.attr('transform', centerTx);
 
@@ -131,7 +131,7 @@ define(function (require) {
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
-                   .text(((newValue.toFixed(2))+'%')/10);  // .text(((newValue.toFixed(2))/100)+'%');
+                   .text(newValue.toFixed(2))+'%');  // .text(((newValue.toFixed(2))/100)+'%');
 
         }
       	that.render = render;
