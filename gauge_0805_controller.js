@@ -123,7 +123,7 @@ define(function (require) {
       			.attr('d', pointerLine)
       			.attr('transform', 'rotate(' +(-90) +')');
 
-      		update(newValue === undefined ? 0 : (newValue/10));
+      		update(newValue === undefined ? 0 : newValue);
 
           // display number (round off to the 2nd decimal place)
           var nnewValue= newValue/10;
