@@ -62,7 +62,7 @@ define(function (require) {
       				return deg2rad(-90 + (ratio * range));
       			})
       			.endAngle(function(d, i) {
-      				var ratio = d * (i+1);
+      				var ratio = d * (i+1)/10;
       				return deg2rad(-90 + (ratio * range));
       			});
       	}
