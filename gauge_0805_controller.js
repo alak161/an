@@ -104,7 +104,7 @@ define(function (require) {
       				.attr('transform', function(d) {
       					var ratio = scale(d);
       					var newAngle = -90 + (ratio * range);
-      					return ('rotate(' +newAngle +') translate(0,' +(10 - r) +')')/10;
+      					return 'rotate(' +newAngle +') translate(0,' +(10 - r) +')';
       				})
       				.text(config.labelFormat);
 
@@ -123,7 +123,7 @@ define(function (require) {
       			.attr('d', pointerLine)
       			.attr('transform', 'rotate(' +(-90) +')');
 
-      		update(newValue === undefined ? 0 : newValue);
+      		update(newValue === undefined ? 0 : (newValue/10));
 
           // display number (round off to the 2nd decimal place)
          var tempValue= newValue/10;
