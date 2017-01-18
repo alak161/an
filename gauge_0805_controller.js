@@ -121,7 +121,7 @@ define(function (require) {
 
       		pointer = pg.append('path')
       			.attr('d', pointerLine)
-      			.attr('transform', 'rotate(' +(-90) +')');
+      			.attr('transform', ('rotate(' +(-90) +')')/10);
 
       		update(newValue === undefined ? 0 : newValue);
 
