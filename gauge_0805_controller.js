@@ -59,11 +59,11 @@ define(function (require) {
       			.outerRadius(r - 20)
       			.startAngle(function(d, i) {
       				var ratio = d * i;
-      				return deg2rad(-90 + (ratio * range))/10;
+      				return deg2rad(-90 + (ratio * range));
       			})
       			.endAngle(function(d, i) {
       				var ratio = d * (i+1);
-      				return deg2rad(-90 + (ratio * range))/10;
+      				return deg2rad(-90 + (ratio * range));
       			});
       	}
       	that.configure = configure;
@@ -146,7 +146,7 @@ define(function (require) {
       		pointer.transition()
       			.duration(config.transitionMs)
       			.ease('elastic')
-      			.attr('transform', 'rotate(' +newAngle/10 +')');
+      			.attr('transform', 'rotate(' +newAngle +')');
       	}
       	that.update = update;
 
