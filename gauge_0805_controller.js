@@ -123,10 +123,10 @@ define(function (require) {
       			.attr('d', pointerLine)
       			.attr('transform', 'rotate(' +(-90) +')');
 
-      		update(newValue === undefined ? 0 : (newValue/10));
+      		update(newValue === undefined ? 0 : newValue);
 
           // display number (round off to the 2nd decimal place)
-         var tempValue= newValue/10;
+         var tempValue= newValue;
          svg.append('svg')
                    .append('text')
                    .style("font-size", "16px")
