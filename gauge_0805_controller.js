@@ -126,13 +126,13 @@ define(function (require) {
       		update(newValue === undefined ? 0 : newValue);
 
           // display number (round off to the 2nd decimal place)
-          var tempValue= newValue/10;
+          newValue= newValue/10;
           svg.append('svg')
                    .append('text')
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
-                   .text(tempValue.toFixed(2)+'%');
+                   .text(newValue.toFixed(2)+'%');
 
         }
       	that.render = render;
@@ -141,7 +141,7 @@ define(function (require) {
       		if ( newConfiguration  !== undefined) {
       			configure(newConfiguration);
       		}
-      		var ratio = scale(newValue);
+      		var ratio = scale(newValue/10);
       		var newAngle = -90 + (ratio * range);
       		pointer.transition()
       			.duration(config.transitionMs)
