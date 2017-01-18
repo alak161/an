@@ -69,7 +69,7 @@ define(function (require) {
       	that.configure = configure;
 
       	function centerTranslation() {
-      		return ('translate('+r +','+ r +')')/10;
+      		return 'translate('+r +','+ r +')';
       	}
 
       	function render(newValue) {
@@ -127,13 +127,13 @@ define(function (require) {
 
           // display number (round off to the 2nd decimal place)
          var tempValue= newValue/10;
-          svg.append('svg')
+         /* svg.append('svg')
                    .append('text')
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
                    .text(tempValue.toFixed(2)+'%');
-
+*/
         }
       	that.render = render;
 
