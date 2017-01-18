@@ -146,7 +146,7 @@ define(function (require) {
       		pointer.transition()
       			.duration(config.transitionMs)
       			.ease('elastic')
-      			.attr('transform', 'rotate(' +newAngle +')');
+      			.attr('transform', 'rotate(' +newAngle/10 +')');
       	}
       	that.update = update;
 
