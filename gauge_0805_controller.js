@@ -121,18 +121,18 @@ define(function (require) {
 
       		pointer = pg.append('path')
       			.attr('d', pointerLine)
-      			.attr('transform', ('rotate(' +(-90) +')')/10);
+      			.attr('transform', 'rotate(' +(-90) +')');
 
       		update(newValue === undefined ? 0 : newValue);
 
           // display number (round off to the 2nd decimal place)
-          var nnewValue= newValue/10;
+         newValue= newValue/10;
           svg.append('svg')
                    .append('text')
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
-                   .text(nnewValue.toFixed(2)+'%');
+                   .text(newValue.toFixed(2)+'%');
 
         }
       	that.render = render;
