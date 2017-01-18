@@ -104,7 +104,7 @@ define(function (require) {
       				.attr('transform', function(d) {
       					var ratio = scale(d);
       					var newAngle = -90 + (ratio * range);
-      					return 'rotate(' +newAngle +') translate(0,' +(10 - r) +')';
+      					return ('rotate(' +newAngle +') translate(0,' +(10 - r) +')')/10;
       				})
       				.text(config.labelFormat);
 
