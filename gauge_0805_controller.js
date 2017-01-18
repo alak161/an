@@ -126,13 +126,13 @@ define(function (require) {
       		update(newValue === undefined ? 0 : newValue);
 
           // display number (round off to the 2nd decimal place)
-          newValue= newValue/10;
+          var tempValue= newValue/10;
           svg.append('svg')
                    .append('text')
                    .style("font-size", "16px")
                    .attr('x',135)
                    .attr('y',200)
-                   .text(newValue.toFixed(2)+'%');
+                   .text(tempValue.toFixed(2)+'%');
 
         }
       	that.render = render;
