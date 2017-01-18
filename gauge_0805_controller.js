@@ -69,7 +69,7 @@ define(function (require) {
       	that.configure = configure;
 
       	function centerTranslation() {
-      		return 'translate('+r +','+ r +')';
+      		return ('translate('+r +','+ r +')')/10;
       	}
 
       	function render(newValue) {
