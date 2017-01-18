@@ -59,11 +59,11 @@ define(function (require) {
       			.outerRadius(r - 20)
       			.startAngle(function(d, i) {
       				var ratio = d * i;
-      				return (deg2rad(-90 + (ratio * range)))/10;
+      				return deg2rad(-90 + (ratio * range))/10;
       			})
       			.endAngle(function(d, i) {
       				var ratio = d * (i+1);
-      				return (deg2rad(-90 + (ratio * range)))/10;
+      				return deg2rad(-90 + (ratio * range))/10;
       			});
       	}
       	that.configure = configure;
